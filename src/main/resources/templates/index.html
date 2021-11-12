@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th = "http://www.w3.org/1999/xhtml" >
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>查询用户列表信息</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>欢迎学习SpringBoot2222</h1>
+<li th:each="users:${users}">
+    <span th:text="${users.id}"></span>
+    <span th:text="${users.usrname}"></span>
+    <span th:text="${users.password}"></span>
+    <span th:text="${users.sex}"></span>
+    <span th:text="${users.room}"></span>
+</li>
 </body>
 </html>
